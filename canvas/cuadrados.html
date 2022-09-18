@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<canvas height="1000" width="1000"></canvas>
+
+<script>
+    var pant = document.querySelector("canvas");
+    var pincel = pant.getContext("2d");
+
+    function dibujarcuadrado(x, y,salto,cant_fila,color) {
+        var x_aux=x
+        var y_aux=y
+        for (var i = 0; i < cant_fila; i++) {
+            pincel.fillStyle = color;
+            pincel.fillRect(x_aux, y_aux, 50, 50);
+            pincel.strokeStyle = "black";
+            pincel.strokeRect(x_aux, y_aux, 50, 50);
+            x_aux+=salto;
+            if(x_aux==1000){
+                y_aux+=50;
+                x_aux=0;
+            }
+        }
+
+    }
+
+    dibujarcuadrado(0,0,50,20,"green");
+    dibujarcuadrado(0,50,50,20,"red");
+    dibujarcuadrado(0,100,50,20,"yellow");
+</script>

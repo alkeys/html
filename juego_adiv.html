@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<h1>juego de adivinar</h1>
+<br>
+<h3>ingrese un numero</h3>
+<input name="inp1"/>
+<button name="boton1">intentar</button>
+<script>
+   var xd=[1,2,3,true]
+   if(xd[3]){
+    alert("fsdff")
+   }
+
+
+function comprobar() {
+    var numero_adivi=Math.round(Math.random()*10);
+    alert(numero_adivi);
+    var numero_dig=document.querySelector("input");
+    if(numero_dig.value==numero_adivi){
+        alert("aserto el intento");
+    }else{
+        alert("incorrecto")
+    }
+    numero_dig.value="";
+    numero_dig.focus();
+}
+var boton=document.querySelector("button");
+boton.onclick=comprobar;
+</script>

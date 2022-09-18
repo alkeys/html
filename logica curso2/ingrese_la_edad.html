@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<h1>calculo de edad con tu fecha de nacimiento</h1>
+<br>
+<h2>ingrese su fecha de nacimiento</h2>
+<br>
+<input id="fecha"/>
+<br>
+<h2>ingrese la fecha actual</h2>
+<br>
+<input id="fec_act" />
+<br>
+<button>aceptar</button>
+<script>
+    function cal_fecha() {
+        var fecha = (document.getElementById("fecha"));
+        var fecha_act = (document.getElementById("fec_act"));
+        var edad=parseInt(fecha_act.value)-parseInt(fecha.value);
+        alert(edad);
+       fecha.value="";
+       fecha_act.value="";
+       fecha.focus;
+    }
+
+    var boton = document.querySelector("button");
+    boton.onclick = cal_fecha;//solo puede llamar a la funcion nose porque pero solo es de investigar
+</script>

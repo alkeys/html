@@ -1,0 +1,123 @@
+body {
+    background-color: #f1f0f0;
+}
+
+header {
+    background-color: #abaaaf;
+}
+
+.caja {
+    position: relative;
+    margin: 0 auto;
+    width: 940px;
+    height: 300px;
+}
+
+.rendondo{
+    width: 250px;
+    height: 250px;
+    border-radius: 150px;
+    border-width: 10px;
+    border-style:double;
+}
+
+nav {
+    position: absolute;
+    top: 80px;
+    right: 70px;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 5px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    /*negrito*/
+    font-size: 22px;
+    text-decoration: none;
+}
+nav a:hover{
+    color: #9c88ff;
+    text-decoration:underline;
+}
+main{
+    width: 920px;
+    font-style: italic;
+    font-size: 20px;
+}
+form{
+    margin: 10px 0;
+    width: 50%;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-left: 25%;
+}
+form label{
+    display: inline-block;
+   margin: 5px 0 ;
+}
+form label:hover{
+    font-style: italic;
+    font-size: 25px;
+    text-decoration: underline;
+    color: #9c88ff;
+}
+
+.lista_campos{
+    margin: 10px 0;
+}
+.ingreso_basico ,form textarea {
+    text-align: center;
+    font-size: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+    top: 1px;
+    width: 95%;
+   
+}
+.botones{
+    display: grid;
+text-align: justify;
+}
+
+.enviar{
+    border-radius: 1px;
+    margin-top: 10px;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    background: darkorange;
+}
+select{
+    width: 50%;
+}
+
+
+
+.enviar:hover{
+    font-size: 30px;
+    font-style: oblique;
+    width: 225px;
+    height: 70px;
+    background: darkorange;
+    border-radius: 15px;
+   box-shadow: 8px 9px 8px darkorange ;
+    border: none;
+}
+footer{
+    text-align: center;
+    background-image: url("imagenes/bg.jpg");
+    padding: 5%;
+
+}
+
+.Copyright{
+    color: aliceblue;
+    font-size: 10px;
+    margin: 20px;
+}

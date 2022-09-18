@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<canvas width="700" height="800" color=""></canvas>
+
+
+<script>
+ var pantalla=document.querySelector("canvas");
+ var pincel=pantalla.getContext("2d");
+ var cant_pi_x_y=600;
+pincel.fillStyle="green"
+pincel.fillRect(50,50,400,400)
+
+pincel.fillStyle="black";
+pincel.beginPath();
+pincel.moveTo(50,50);
+pincel.fillRect(100,90,100,100);
+pincel.fillRect(300,90,100,100);
+pincel.fillRect(200,190,100,190);
+pincel.fillRect(120,250,80,180);
+pincel.fillRect(300,250,80,180);
+pincel.fill();
+
+</script>

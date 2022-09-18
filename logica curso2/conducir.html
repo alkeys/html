@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var edad = parseInt(prompt("¿Cuál es tu edad?"));
+
+if(edad>=18){
+    var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+if(tieneLicencia=="s"){
+    alert("puede conducir");
+}else{
+    alert("no puede conducir");
+}
+}else{
+    alert("no puede conducir");
+}
+
+</script>

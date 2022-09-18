@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<h1>Calculo de promedio  IMC</h1>
+
+<script>
+    function saltarlinea() {
+        document.write("<br>");
+    }
+    function imprimir(dato) {
+        document.write(dato);
+    }
+    function cal_imc_promedio(peso,altura,peso2,altura2) {
+        var salidad;
+        var salida2;
+        salidad=peso/(Math.pow(altura,2));
+        salidad=Math.round(salidad);
+        salida2=peso2/(Math.pow(altura2,2));
+        salida2=Math.round(salida2);
+        return ((salidad+salida2)/2);
+    }
+var peso=71;
+var altura=1.72;
+var peso2=71;
+var altura2=1.72;
+imprimir("el imc promedio es de ");
+document.write(cal_imc_promedio(peso,altura,peso2,altura2));
+</script>

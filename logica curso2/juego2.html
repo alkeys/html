@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<h1>adivine el numero entre el 0 al 10</h1>
+
+<script>
+function saltarline() {
+    document.write("<br><br>");
+}
+function imprimir(params) {
+    document.write(params);
+    
+}
+
+var n_adivinar=Math.round(Math.random()*10);
+var numero_ingresar=parseInt(prompt("ingrese el numero para adivinar"));
+while(numero_ingresar<0 || numero_ingresar>10){
+    alert("Error numero maximo o menor que el rango");
+    numero_ingresar=parseInt(prompt("ingrese el numero para adivinar"));
+}
+
+if(numero_ingresar==n_adivinar){
+    alert("has ganado !!!!!!!!!!");
+}else{
+    imprimir(n_adivinar);
+}
+</script>

@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<h1>Calculo de IMC</h1>
+
+<script>
+    function saltarlinea() {
+        document.write("<br>");
+    }
+    function imprimir(dato) {
+        document.write(dato);
+    }
+    function cal_imc(peso,altura) {
+        var salidad;
+        salidad=peso/(Math.pow(altura,2));
+        salidad=Math.round(salidad);
+        return salidad;
+    }
+var peso=71;
+var altura=1.72;
+document.write("El IMC DE Chirstian es de "+(cal_imc(peso,altura)));
+saltarlinea();
+peso=75;
+altura=1.73;
+document.write("El IMC DE Felipe es de "+(cal_imc(peso,altura)));
+</script>

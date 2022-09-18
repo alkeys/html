@@ -1,0 +1,27 @@
+<canvas width="600" height="400"> </canvas>
+<script>
+    var cant_click = 0
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = "grey";
+    pincel.fillRect(0, 0, 600, 400);
+    pantalla.onclick = dibujarCirculo;
+    var color = ["blue", "red", "green"]
+    function dibujarCirculo(event) {
+        cant_click++;
+        if (cant_click == 3) {
+            cant_click = 0;
+        }
+        var x = event.pageX - pantalla.offsetLeft; //pos x
+        var y = event.pageY - pantalla.offsetTop;
+        pincel.fillStyle = color[cant_click];
+        pincel.strokeStyle = "black";
+        var pi = Math.PI;
+        pincel.beginPath();
+        pincel.arc(x, y,15, 0, (2 * pi));
+        pincel.fill();
+        x_temp = x;
+        y_temp = y;
+    }
+</script>

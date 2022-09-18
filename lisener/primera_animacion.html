@@ -1,0 +1,36 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+    var avance = 0;
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = "lightgrey";
+    pincel.fillRect(0, 0, 600, 400);
+
+    function dibujarCirculo(x, y, r) {
+        pincel.beginPath();
+        pincel.fillStyle = "green";
+        pincel.arc(x, y, r, 0, (2 * Math.PI));
+        pincel.stroke();
+        pincel.fill();
+    }
+
+    function limpiar() {
+        pincel.clearRect(0, 0, pantalla.width, pantalla.height);
+        pincel.fillStyle = "lightgrey";
+        pincel.fillRect(0, 0, 600, 400);
+    }
+
+    function  avance_() {
+    limpiar();    
+    var tama = pantalla.width;
+    var aumentar = tama / 16;
+    avance+=2;
+    dibujarCirculo(avance, 15, 15);
+    }
+
+    setInterval(avance_, 100);
+
+
+
+</script>

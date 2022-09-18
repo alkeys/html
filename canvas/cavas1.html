@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<canvas width="700" height="800" color=""></canvas>
+
+
+<script>
+ var pantalla=document.querySelector("canvas");
+ var pincel=pantalla.getContext("2d");
+ var cant_pix=400;
+ pincel.fillStyle='#000000';
+for(var iteracion=0;iteracion<=cant_pix;iteracion++){
+    pincel.fillRect(iteracion,0,5,5);
+    pincel.fillRect(0,iteracion,5,5);
+    pincel.fillRect(iteracion,cant_pix,5,5);
+    pincel.fillRect(cant_pix,(cant_pix-iteracion),5,5);
+    //////////////////////////
+    pincel.fillRect(iteracion,(cant_pix/2),5,5);
+    ////////////////////
+    //pintar
+}
+pincel.fillStyle="#0d9778";
+pincel.fillRect(2,2,398,198);
+pincel.fillStyle="#820669";
+pincel.fillRect(2,202,398,198);
+
+pincel.fillStyle="yellow";
+pincel.beginPath();
+pincel.moveTo(200,50);
+pincel.lineTo(50,320);
+pincel.lineTo(350,320);
+pincel.fill();
+
+pincel.fillStyle="yellow";
+pincel.beginPath();
+pincel.moveTo(200,390);
+pincel.lineTo(50,150);
+pincel.lineTo(350,150);
+pincel.fill();
+
+</script>

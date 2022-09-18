@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Productos - Barbería Aluera</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="contacto.css">
+</head>
+
+<body>
+    <header>
+        <div class="caja">
+            <h1><img class="rendondo" src="imagenes/logo.png"></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<main>
+    <form>
+    <label for="nombreApellido" class="lista_campos" >Ingrese Su nombre</label>
+    <input id="nombreApellido" class="ingreso_basico" type="text">
+        <label for="email" class="lista_campos" >Ingrese Su Email</label>
+        <input id="email" class="ingreso_basico" type="email">
+        <label for="tel" class="lista_campos" >Ingrese Su Telefono</label>
+        <input id="tel" class="ingreso_basico" type="tel">
+
+        <label class="lista_campos" for="area_tex">Mensaje</label>
+        <textarea  id="area_tex"></textarea>
+        <p1>¿Como le gustaria que lo contactemos?</p1>
+
+<div class="botones">
+
+            <label for="selecion_1"><input class="boton_check" type="radio" name="contacto" id="selecion_1">Email </label>
+
+            <label for="selecion_2"><input class="boton_check" type="radio" name="contacto" id="selecion_2"> Telefono</label>
+
+            <label for="selecion_3"> <input class="boton_check" type="radio" name="contacto" id="selecion_3"> Whatsapp</label>
+</div>
+
+        <div class="botones">
+            <label>selecionar</label>
+            <select>
+                <option></option>
+            </select>
+        </div>
+
+        <input class="enviar" type="submit">
+   </form>
+    </main>
+
+
+    <footer>
+        <img id="img_pie" src="imagenes/logo-blanco.png">
+        <p class="Copyright">&copy Copyright  Barberia Alura -2022</p>
+    </footer>
+</body>
+
+</html>

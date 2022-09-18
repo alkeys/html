@@ -1,0 +1,76 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var pantalla = document.querySelector('canvas');
+    var pincel = pantalla.getContext('2d');
+    pincel.fillStyle = 'lightgrey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    
+pincel.fillStyle="red";
+   pincel.fillRect(0,0,50,50);
+   pincel.fillStyle="green";
+   pincel.fillRect(50,0,50,50);
+   pincel.fillStyle="blue";
+   pincel.fillRect(100,0,50,50);
+   pincel.fill();
+
+
+    var puedoDibujar = false;
+    var color_="blue"
+    function dibujarCirculo(evento) {
+
+        if(puedoDibujar) {
+            var x = evento.pageX - pantalla.offsetLeft;
+            var y = evento.pageY - pantalla.offsetTop;
+            pincel.fillStyle = color_;
+            pincel.beginPath();
+            pincel.arc(x, y, 5, 0, 2 * 3.14);
+            pincel.fill();
+        }
+
+    }
+
+   
+
+    function habilitarDibujar() {
+
+        puedoDibujar = true;
+    }
+
+    function deshabilitarDibujar() {
+
+        puedoDibujar = false;
+    }
+
+    function color_assig(event){
+        var x = event.pageX - pantalla.offsetLeft;
+        var y = event.pageY - pantalla.offsetTop;
+       
+        if(x>=0 && x<=50){
+         if(y>=0 && y<=50){
+            color_="red";
+         }
+        }
+
+        if(x>=50 && x<=100){
+         if(y>=0 && y<=50){
+            color_="green";
+         }
+        }
+        if(x>=100 && x<=150){
+         if(y>=0 && y<=50){
+            color_="blue";
+         }
+        }
+    }
+    
+    pantalla.onclick=color_assig;
+
+    pantalla.onmousemove = dibujarCirculo;
+
+    pantalla.onmousedown = habilitarDibujar;
+
+    pantalla.onmouseup = deshabilitarDibujar;
+
+</script>

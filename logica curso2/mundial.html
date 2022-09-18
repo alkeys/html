@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<h1>calculo de los mundiales de la fifa</h1>
+
+<script>
+    /*un mundial de la FIFA, que fue en Uruguay, fue en el año 1930.
+ Y hay un mundial de fútbol de la FIFA cada cuatro años.*/
+function saltarline() {
+    document.write("<br>");
+}
+function imprimir(params) {
+    document.write(params);
+}
+var fecha_primer_mundial=1930;
+var cant_fecha=((1994-fecha_primer_mundial)/4)+1;
+for (i = 0; i < cant_fecha ;i++) {
+imprimir("mundial N: "+(i+1)+" fue en el año "+(fecha_primer_mundial));
+fecha_primer_mundial+=4;
+saltarline();
+}
+
+</script>

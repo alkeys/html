@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<h1>Programa para el Calculo de un equipo de futbol</h1>
+
+<script>
+    function saltarlinea() {
+        document.write("<br><br><br>");
+    }
+    function imprimir(params) {
+        document.write(params);
+    }
+
+    var cat_partidos_ganados=parseInt(prompt("ingrese la cant de partidos ganados"));
+    var cat_partidos_empatados=parseInt(prompt("ingrese la cantidad de partidos empatados"));
+    //los partidos ganados es = 3 puntos y los empatados es = 1
+    var cat_puntos=(cat_partidos_ganados*3)+cat_partidos_empatados;
+    imprimir("la cantidad de puntos en total es de "+cat_puntos);
+
+    var catn_puntos_pasados=parseInt(prompt("ingrese la cantidad de puntos del año pasado"));
+    if(catn_puntos_pasados>cat_puntos){
+        saltarlinea();
+        imprimir("la puntos son menores que el año pasdo");
+    }else{
+        saltarlinea();
+    if(catn_puntos_pasados<cat_puntos){
+        imprimir("la cantidad de puntos es mallor que el año pasado")
+    }
+    }
+    if(catn_puntos_pasados==cat_puntos){
+        saltarlinea();
+        imprimir("la cantidad de puntos es igual que el año pasado");
+    }
+
+
+</script>

@@ -1,0 +1,58 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+    var x=0;
+    var y=0;
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = "lightgrey";
+    pincel.fillRect(0, 0, 600, 400);
+
+    function dibujarCirculo(x, y, r,color) {
+        pincel.beginPath();
+        pincel.fillStyle = color;
+        pincel.arc(x, y, r, 0, (2 * Math.PI));
+        pincel.stroke();
+        pincel.fill();
+    }
+
+    function limpiar() {
+        pincel.clearRect(0, 0, pantalla.width, pantalla.height);
+        pincel.fillStyle = "lightgrey";
+        pincel.fillRect(0, 0, 600, 400);
+    }
+
+    function  avance_() {
+    limpiar();    
+     x=parseInt(Math.random()*pantalla.width);
+     y=parseInt(Math.random()*pantalla.height);
+    var radio=5;
+    objeto(x,y,radio)
+   
+    }
+
+    function objeto(x,y,radio) {
+    dibujarCirculo(x, y, radio+20,"red");
+    dibujarCirculo(x, y, radio+10,"white");
+    dibujarCirculo(x, y, radio,"red");
+    }
+
+    function disparo(event){
+        console.log(event.pageX- pantalla.offsetLeft);
+        var x_ = event.pageX - pantalla.offsetLeft; //pos x
+        var y_ = event.pageY - pantalla.offsetTop; //pos y
+        
+        if(x_>=(x-5) && x_<=(x+5)){
+           
+            if(y_>=(y-5) && y_<=(y+5)){
+                alert("disparo!!!!!!!!!!  \ndisparo hacertado")
+            }
+        }
+    }
+
+    pantalla.onclick=disparo;
+    setInterval(avance_, 10000);
+
+
+
+</script>
